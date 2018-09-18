@@ -11,12 +11,16 @@ var responsMenu=function(){
         $("#menu").attr("class","menu");
         $(".header").attr("style","border:0");
         $("i").attr("style","margin-top:4px;margin-left:4px;");
+        $("#mainBackground").removeClass("mainBackground");
+        $("h4").attr("class","ui header");
       }
       if (win.width() > 768) { 
         $("#topAttached").attr("class","ui inverted tiny segment");
         $("#nav").attr("class","ui inverted secondary pointing  menu");
         $("#menu").attr("class","ui grid");
         $("i").attr("style","margin-top:9px;");
+        $("#mainBackground").addClass("mainBackground");
+        $("h4").attr("class","ui inverted header sectionTitle");
       }
 };
 
@@ -36,7 +40,7 @@ var pics=["https://images.unsplash.com/photo-1437652633673-cc02b9c67a1b?ixlib=rb
 "https://images.unsplash.com/photo-1471958680802-1345a694ba6d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=141ed65bae0927538d045ef436582cb5&auto=format&fit=crop&w=500&q=60"];
 
 
-
+//slideshow
 var slideIndex=0;
 carousel();
 
@@ -45,7 +49,6 @@ function carousel(){
   if (slideIndex>pics.length){slideIndex=1}
    $("img").fadeOut(2000,function() {
         $(this).attr("src",pics[slideIndex-1]).fadeIn(2000).delay(1000)});
-  // $("img").attr("src",pics[slideIndex-1]).fadeIn(100).delay(1000);
   setTimeout(carousel,4100);
 }
 
