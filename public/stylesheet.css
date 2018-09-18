@@ -31,7 +31,7 @@ p{
 
 
 
-/*Education style for each section*/
+/*Education/work experience styles for each section*/
 section{
   background-color:transparent;
   padding-top: 50px;
@@ -59,6 +59,10 @@ section:first-child{
   font-size:2em;
 }
 
+
+/* Index page styles */
+
 img{
   box-shadow:rgb(0, 0, 0) 16px 14px 15px -15px ;
 }
+
